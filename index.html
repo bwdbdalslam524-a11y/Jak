@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>أسرة الدفعة 21 | كلية علوم الحاسوب - جامعة سنار</title>
+    <meta name="description" content="الموقع الرسمي لأسرة الدفعة 21 - كلية علوم الحاسوب وتقانة المعلومات - جامعة سنار. الصندوق التكافلي، الأهداف والإنجازات.">
+    <meta name="keywords" content="جامعة سنار, أسرة الدفعة 21, علوم الحاسوب, السودان, صندوق تكافلي, عمل تطوعي">
+    <meta name="author" content="أسرة الدفعة 21">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #d4af37;
+            --white: #ffffff;
+            --text-dark: #334155;
+            --bg-light: #f1f5f9;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* --- تصميم الهيدر (سينمائي) --- */
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('1000191596.jpg') center/cover no-repeat fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .header-content h3 { font-weight: 400; opacity: 0.9; margin-bottom: 5px; }
+        .header-content h2 { color: white; margin: 0; font-size: 1.5rem; letter-spacing: 2px; opacity: 0.9; }
+        
+        /* اسم الكلية المضاف */
+        .header-content .college-name { 
+            color: var(--accent); 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            margin: 10px 0;
+            animation: fadeInRight 1.5s ease;
+        }
+
+        .header-content h1 { 
+            font-size: clamp(2.5rem, 8vw, 4rem); 
+            margin: 15px 0; 
+            font-weight: 900;
+            text-shadow: 4px 4px 6px rgba(0,0,0,0.6);
+            animation: slideInDown 1.5s ease-out;
+        }
+        
+        .welcome-badge {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            animation: pulse 2s infinite;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* --- القائمة العلوية (sticky) --- */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            margin: 0 15px;
+            font-weight: 700;
+            transition: all 0.3s;
+            position: relative;
+        }
+        nav a:hover { color: var(--accent); transform: translateY(-3px); }
+
+        /* --- التنسيق العام للأقسام --- */
+        section { padding: 80px 10%; }
+        h2.section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+            text-shadow: 2px 2px 0px #e2e8f0;
+        }
+
+        /* --- تصميم الكروت (3D & Interactive) --- */
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+        .quran-box {
+            background: #fffdf5;
+            border-right: 8px solid var(--accent);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        /* --- شبكة الأهداف والإنجازات (Grid 3D) --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .grid-item {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            border-bottom: 8px solid var(--accent);
+            transition: all 0.4s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .grid-item:hover { transform: translateY(-10px) rotateX(5deg); box-shadow: 0 15px 25px rgba(0,0,0,0.1); }
+        .grid-item i { font-size: 3rem; color: var(--accent); margin-bottom: 20px; }
+        .grid-item h3 { font-size: 2rem; margin: 0; color: var(--primary); }
+
+        /* --- خلفيات مخصصة للصور المرفوعة --- */
+        #achievements { background: linear-gradient(rgba(241, 245, 249, 0.92), rgba(241, 245, 249, 0.92)), url('1000191598.jpg') center/cover fixed; }
+        #fund { background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('1000191600.jpg') center/cover fixed; color: white; }
+        #fund .section-title { color: white; }
+
+        /* --- جدول الأعضاء (Mobile Friendly) --- */
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        th { background: var(--primary); color: white; padding: 20px; text-align: right; }
+        td { padding: 18px 20px; border-bottom: 1px solid #eee; color: var(--text-dark); }
+        .dept-row { background: #f8fafc; font-weight: bold; color: var(--accent); font-size: 1.1rem; }
+
+        /* --- قسم التبرع (3D Button) --- */
+        .help-box {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 60px;
+            border-radius: 40px;
+            text-align: center;
+            margin: 60px 0;
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+        }
+        .donate-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 22px 50px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 8px 0px #b8952d;
+            margin-top: 30px;
+        }
+        .donate-btn:hover { background: #1e293b; }
+        .donate-btn:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0px #b8952d;
+        }
+
+        /* --- فوتر (Social Links) --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .footer-verse {
+            font-size: 1.2rem;
+            color: var(--accent);
+            line-height: 2;
+            margin-bottom: 30px;
+            display: block;
+        }
+        .location-info {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            opacity: 0.8;
+        }
+        .social-links { margin-top: 25px; }
+        .social-links a {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0 12px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .social-links a:hover { color: var(--accent); transform: scale(1.2); }
+
+        /* --- مودال التبرع (Popup) --- */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            backdrop-filter: blur(8px);
+            animation: fadeIn 0.4s;
+        }
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            margin: 10vh auto;
+            padding: 40px;
+            border-radius: 35px;
+            position: relative;
+            animation: slideInUp 0.4s;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px; left: 25px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        .account-info {
+            background: #f8fafc;
+            padding: 18px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-right: 6px solid var(--accent);
+        }
+
+        /* --- تحريكات CSS (Animations) --- */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideInDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes fadeInRight { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes slideInUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes pulse { 
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- استجابة الشاشات (Responsive) --- */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            section { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <div class="header-content">
+            <h3>بسم الله الرحمن الرحيم</h3>
+            <h2>جامعة سنار</h2>
+            <div class="college-name">كلية علوم الحاسوب و تقانة المعلومات</div>
+            <h1>أسرة الدفعة 21</h1>
+            <div class="welcome-badge">ترحب بكم</div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#intro">المقدمة</a>
+        <a href="#goals">الأهداف</a>
+        <a href="#achievements">الإنجازات</a>
+        <a href="#fund">الصندوق</a>
+        <a href="#members">الأعضاء</a>
+    </nav>
+
+    <section id="intro">
+        <h2 class="section-title">مقدمة عن الأسرة</h2>
+        <div class="card">
+            <p style="font-weight: bold; text-align: center; font-size: 1.2rem;">مصدر الفكرة في قوله جلا في علاه آيات قرآنية تتحدث عن الصدقة:</p>
+            <div class="quran-box">﴿إِن تُبْدُوا الصَّدَقَاتِ فَنِعِمَّا هِيَ وَإِن تُخْفُوهَا وَتُؤْتُوهَا الْفُقَرَاءَ فَهُوَ خَيْرٌ لَّكُمْ﴾</div>
+            <div class="quran-box">﴿يَمْحَقُ اللَّهُ الرِّبَا وَيُرْبِي الصَّدَقَاتِ﴾</div>
+            <div class="quran-box">﴿إِنَّ الْمُصَّدِّقِينَ وَالْمُصَّدِّقَاتِ وَأَقْرَضُوا اللَّهَ قَرْضًا حَسَنًا يُضَاعَفُ لَهُمْ﴾</div>
+            <div class="quran-box">﴿خُذْ مِنْ أَمْوَالِهِمْ صَدَقَةً تُطَهِّرُهُمْ وَتُزَكِّيهِم بِهَا﴾</div>
+            <div class="quran-box">﴿وَمَا أَنفَقْتُم مِّن شَيْءٍ فَهُوَ يُخْلِفُهُ وَهُوَ خَيْرُ الرَّازِقِينَ﴾</div>
+        </div>
+    </section>
+
+    <section id="goals" style="background-color: white;">
+        <h2 class="section-title">أهداف الأسرة والصندوق</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <p>المساهمة في تسديد الرسوم الدراسية عند الحوجة</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-heartbeat"></i>
+                <p>المساهمة في دعم الطلاب في الحالات المرضية</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-calendar-alt"></i>
+                <p>المساهمة في اقامة الفعاليات داخل الكلية</p>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-book-reader"></i>
+                <p>المساهمة في الانشطة الثقافية و الاكاديمية</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2 class="section-title">إنجازات الأسرة</h2>
+        <div class="grid">
+            <div class="grid-item"><h3>1</h3><p>سداد رسوم دراسية لعديد من زملاء الاسرة</p></div>
+            <div class="grid-item"><h3>2</h3><p>مساهمة في نضافة الكلية</p></div>
+            <div class="grid-item"><h3>3</h3><p>شراء فرش للمصلى واستراحة البنات</p></div>
+            <div class="grid-item"><h3>4</h3><p>دعم الطلاب وتوفير الرعاية في الحالات المرضية</p></div>
+            <div class="grid-item"><h3>5</h3><p>مبادرة إعمار الكلية</p></div>
+        </div>
+    </section>
+
+    <section id="fund">
+        <h2 class="section-title">مبادرة الصندوق التكافلي</h2>
+        <div class="card" style="color: var(--text-dark);">
+            <p>ـ هو الركيزة الاساسية التي تعتمد عليه الاسرة لمواجهة التحديات المادية التي قد تواجه اي زميل في الدفعة</p>
+            <hr style="border-color: #e2e8f0; margin: 20px 0;">
+            <p>ـ يتم جمع المساهمات اسبوعيا مما يعكس روح التعاون والتكاتف لدى الاسرة</p>
+        </div>
+        
+        <div class="help-box">
+            <h3 style="font-size: 2rem;">لو عاوز تساعد هنا 🤍</h3>
+            <p>مساهمتك تصنع فرقاً</p>
+            <button class="donate-btn" onclick="openModal()">تبرع الآن للصندوق</button>
+        </div>
+    </section>
+
+    <section id="members" style="background-color: white;">
+        <h2 class="section-title">الاعضاء والمساؤلين</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>المنصب / اللجنة</th><th>الاسم</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>الرئيس</td><td>انتصار صالح</td></tr>
+                    <tr><td>نائب الرئيس</td><td>محمد علي </td></tr>
+                    <tr class="dept-row"><td colspan="2">الإدارة المالية</td></tr>
+                    <tr><td>اللجنة المالية</td><td>عباس احمد / عبد السلام عبود / ابرار أبو دجانه / ايلاف النعيم</td></tr>
+                    <tr class="dept-row"><td colspan="2">المكتب الثقافي</td></tr>
+                    <tr><td>اللجنة الثقافية</td><td>لاصف الزبير / محمد مسلم / ماجدة صديق</td></tr>
+                    <tr class="dept-row"><td colspan="2">اعلام الاسرة</td></tr>
+                    <tr><td>اللجنة الإعلامية</td><td>سحر موسى / عمار جمعة</td></tr>
+                    <tr class="dept-row"><td colspan="2">مسؤولي الأقسام</td></tr>
+                    <tr><td>قسم تقانة</td><td>يوسف صديق - زهراء خلف الله</td></tr>
+                    <tr><td>قسم شبكات</td><td>عبد السلام عبود - فاطمة عبد الله</td></tr>
+                    <tr><td>قسم علوم</td><td>محمد عادل - ملاذ احمد</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <span class="footer-verse">
+            (..... وَمَا تُقَدِّمُوا۟ لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ ٱللَّهِ هُوَ خَيْرًا وَأَعْظَمَ أَجْرًا وَٱسْتَغْفِرُوا۟ ٱللَّهَ إِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌۢ) 🤍
+        </span>
+        <p>© 2026 أسرة الدفعة 21 - جامعة سنار - جميع الحقوق محفوظة</p>
+        <p class="location-info">موقعنا: سنار / ود هاشم</p>
+        <div class="social-links">
+            <a href="رابط_فيسبوك_الأسرة_هنا" title="فيسبوك"><i class="fab fa-facebook"></i></a>
+            <a href="رابط_يوتيوب_الأسرة_هنا" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+            <a href="رابط_قوقل_أو_الموقع_هنا" title="قوقل"><i class="fab fa-google"></i></a>
+        </div>
+    </footer>
+
+    <div id="donateModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 style="text-align: center; color: var(--primary);">أرقام الحسابات للتبرع 🤍</h2>
+            
+            <div class="account-info">
+                <strong>9152483 بنكك</strong><br>بإسم :عباس أحمد الشريف
+            </div>
+            <div class="account-info">
+                <strong>1221216 أوكاش</strong><br>بإسم : عبد السلام عبود عبد السلام
+            </div>
+            <div class="account-info">
+                <strong>401076174 ماي كاشي</strong><br>بإسم :عبد السلام عبود عبد السلام
+            </div>
+            <hr style="border-color: #eee; margin: 20px 0;">
+            <p style="text-align: center; font-weight: bold;">رقم الاشعارات: 0128546149</p>
+            
+            <h3 style="text-align: center; margin-top: 25px;">للتبرع برصيد 🤍</h3>
+            <div style="text-align: center; background: #f8fafc; padding: 15px; border-radius: 10px;">
+                زين : 0905738452 <br> سوداني : 0128546149
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('donateModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // منع التمرير في الخلفية
+        }
+        function closeModal() {
+            document.getElementById('donateModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        // إغلاق عند الضغط خارج المودال
+        window.onclick = function(event) {
+            let modal = document.getElementById('donateModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+</body>
+</html>
